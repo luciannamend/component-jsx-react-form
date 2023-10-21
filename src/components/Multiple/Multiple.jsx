@@ -131,20 +131,12 @@ export default function Multiple() {
       </form>
       <div className="multiple__button">
         {/*Submit button*/}
-        <button
-          className="button__submit"
-          type="submit"
-          onClick={handleSubmit}
-        >
+        <button className="button__submit" type="submit" onClick={handleSubmit}>
           Submit
         </button>
 
         {/*Cancel button*/}
-        <button
-          className="button__cancel"
-          type="cancel"
-          onClick={handleCancel}
-        >
+        <button className="button__cancel" type="cancel" onClick={handleCancel}>
           Cancel
         </button>
       </div>
