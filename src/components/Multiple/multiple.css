@@ -1,0 +1,85 @@
+.multiple {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 30%;
+  margin-bottom: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgba(86, 161, 231, 0.342);
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.multiple__input {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  width: 80%;
+  border-radius: 8px;
+  background-color: rgb(232, 238, 245);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.multiple__input {
+  padding: 2%;
+}
+
+.multiple__text {
+  display: block;
+}
+
+.dropdown {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+select {
+  padding: 1%;
+  padding-right: 16%;
+  margin-top: 1%;
+  border-radius: 8px;
+  background-color: rgb(232, 238, 245);
+}
+
+.multiple__button {
+  width: 100%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.button__submit {
+  padding: 10px 20px;
+  margin-left: 5%;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(86, 161, 231);
+}
+.button__submit:hover {
+  background-color: rgb(50, 143, 230);
+  border: rgb(232, 238, 245);
+  color: rgb(232, 238, 245);
+}
+
+.button__cancel {
+  padding: 10px 20px;
+  margin-right: 5%;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(245, 15, 7, 0.733);
+}
+
+.button__cancel:hover {
+  background-color: rgb(245, 15, 7);
+  color: rgb(232, 238, 245);
+  border: rgb(232, 238, 245);
+}

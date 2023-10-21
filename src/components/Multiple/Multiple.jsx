@@ -14,7 +14,7 @@ export default function Multiple() {
   // handle input change
   const handleChange = (event) => {
     const { name, value } = event.target;
-    const decimalRegex = /^[0-9]+(\.[0-9]+)?/;    
+    const decimalRegex = /^[0-9]+(\.[0-9]+)?/;
     if (name !== "price" || decimalRegex.test(value)) {
       setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
     }
@@ -52,95 +52,102 @@ export default function Multiple() {
 
   //Form display
   return (
-    <div> 
-        <form onSubmit={handleSubmit} className="multiple">
+    <div>
+      <form onSubmit={handleSubmit} className="multiple">
         {/*Name*/}
         <label className="multiple__text" htmlFor="name">
-            Name:
+          Name:
         </label>
         <input
-            type="text"
-            id="name"
-            className="multiple__input"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
+          type="text"
+          id="name"
+          className="multiple__input"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
         />
 
         {/*Description*/}
         <label className="multiple__text" htmlFor="description">
-            Description:
+          Description:
         </label>
         <input
-            type="description"
-            id="description"
-            className="multiple__input"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
+          type="description"
+          id="description"
+          className="multiple__input"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
         />
 
         {/*Category*/}
         <label className="dropdown" htmlFor="category">
-            Category:
+          Category:
         </label>
         <select value={selectedOption} onChange={handleDropdownChange}>
-            <option id="electronics" name="electronics" value="electronics">
+          <option id="electronics" name="electronics" value="electronics">
             {" "}
             Electronics
-            </option>
-            <option id="clothing" name="clothing" value="clothing">
+          </option>
+          <option id="clothing" name="clothing" value="clothing">
             {" "}
             Clothing
-            </option>
-            <option id="groceries" name="groceries" value="groceries">
+          </option>
+          <option id="groceries" name="groceries" value="groceries">
             {" "}
             Groceries
-            </option>
-            <option id="home" name="home" value="home">
+          </option>
+          <option id="home" name="home" value="home">
             {" "}
             Home
-            </option>
+          </option>
         </select>
 
         {/*Quantity*/}
         <label className="multiple__text" htmlFor="quantity">
-            Quantity:
+          Quantity:
         </label>
         <input
-            type="number"
-            id="quantity"
-            className="multiple__input"
-            name="quantity"
-            value={formData.quantity}
-            onChange={handleChange}
+          type="number"
+          id="quantity"
+          className="multiple__input"
+          name="quantity"
+          value={formData.quantity}
+          onChange={handleChange}
         />
 
         {/*Price*/}
         <label className="multiple__text" htmlFor="price">
-            Price:
+          Price:
         </label>
         <input
-            type="text"
-            id="price"
-            className="multiple__input"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
+          type="text"
+          id="price"
+          className="multiple__input"
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
         />
-        </form>
+      </form>
+      <div className="multiple__button">
+        {/*Submit button*/}
+        <button
+          className="button__submit"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
 
-        <div>
-            {/*Submit button*/}
-            <button className="multiple__button" type="submit" onClick={handleSubmit}>
-                Submit
-            </button>
-
-            {/*Cancel button*/}
-            <button className="multiple__button" type="cancel" onClick={handleCancel}>
-                Cancel
-            </button>
-        </div>
+        {/*Cancel button*/}
+        <button
+          className="button__cancel"
+          type="cancel"
+          onClick={handleCancel}
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 }
